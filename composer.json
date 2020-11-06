@@ -1,0 +1,60 @@
+{
+    "name": "exception-live/laravel",
+    "description": "Exception.Live Laravel integration library",
+    "keywords": [
+        "logging",
+        "debugging",
+        "monitoring",
+        "errors",
+        "exceptions",
+        "php",
+        "tracking",
+        "deploying",
+        "laravel",
+        "laravel-exception"
+    ],
+    "homepage": "https://github.com/exception-live/laravel",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "exception-live/php": "dev-master",
+        "sixlive/dotenv-editor": "^1.1",
+        "illuminate/console": "^5.7|^6.0|^7.0|^8.0",
+        "illuminate/support": "^5.7|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "larapack/dd": "^1.1",
+        "mockery/mockery": "^1.1",
+        "phpunit/phpunit": "^6.0|^7.0|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExceptionLive\\ExceptionLiveLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ExceptionLive\\ExceptionLiveLaravel\\Tests\\": "tests"
+        },
+        "files": [
+            "tests/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ExceptionLive\\ExceptionLiveLaravel\\ExceptionLiveServiceProvider"
+            ],
+            "aliases": {
+                "ExceptionLive": "ExceptionLive\\ExceptionLiveLaravel\\Facades\\ExceptionLive"
+            }
+        }
+    }
+}
