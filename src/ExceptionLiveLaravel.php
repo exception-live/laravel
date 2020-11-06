@@ -9,7 +9,7 @@ class ExceptionLiveLaravel
     /**
      * Package Version
      */
-    const VERSION = '0.1';
+    const VERSION = '0.1.1';
 
     /**
      * @param array $config
